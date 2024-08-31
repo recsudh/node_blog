@@ -1,0 +1,84 @@
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Node Blog - New Post</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <header class="masthead" style="background-image: url('assets/img/post-sample-image.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Create Post</h1>
+                            <span class="subheading">Blogs by Node_Blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+  <!-- Navigation-->
+       {{> navigation}}
+
+    <div class="container">
+        <div class="row">
+
+
+            
+
+            <div class="col-md-8 offset-md-2">
+
+                <form action="/posts/store" method="POST" enctype="multipart/form-data">
+                    <div class="control-group">
+                        
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Title</label>
+                            <input type="text" name="title" class="form-control">
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>subtitle</label>
+                            <input type="text" name="subtitle" class="form-control">
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Contents</label>
+                           <textarea name="content" id="" cols="30" rows="10" class="form-control"></textarea>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="form-group mt-5">
+                        <input type="file" name="image" class="form-control-file">
+                        </div>
+                    
+                    <div class="form-group my-4 text-center">
+                    <button class="btn btn-primary">Create Post</button>
+                    </div>
+                </form>
+                
+
+            </div>
+        </div>
+
+    </div>
+
+ <!-- Footer-->
+        {{> footer}}
