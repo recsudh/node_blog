@@ -10,12 +10,12 @@ const store_user= async(req,res)=>{
             throw new Error("User data is required!!")
             
         }
-         
-         res.redirect("/")
-         await user.save()
+        await user.save()
 
         req.session.user_Id= user._id
         req.session.save()
+        res.redirect("/")
+         
         console.log(req.session.user_Id)
     }catch(e){
         console.log(e)
