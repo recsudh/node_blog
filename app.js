@@ -63,7 +63,7 @@ console.log(dir);
 console.log(dir_path);
 console.log(partials_path);
 
-const port = process.env.port;
+const port = process.env.port ||3000;
 
 app.set("view engine", "hbs");
 app.set("views", dir);
